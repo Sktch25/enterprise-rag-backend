@@ -1,15 +1,21 @@
 import os
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from query_db import run_rag_pipeline  # Importing your existing core function
 
-# Initialize the FastAPI application
 app = FastAPI(
     title="Enterprise RAG Backend",
     description="A production-ready API for querying document vector databases",
     version="1.0.0"
 )
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (POST, GET, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 # Define the expected JSON structure for incoming requests
 class QueryRequest(BaseModel):
     question: str
