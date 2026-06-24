@@ -2,7 +2,7 @@
 
 An enterprise-grade Retrieval-Augmented Generation (RAG) backend engine designed to ingest corporate documents, process them into high-density vector embeddings, and provide context-aware answers to user queries using FastAPI, LangChain, and the Google Gemini API.
 
-## 🚀 Features
+##  Features
 
 * **Asynchronous FastAPI Architecture:** Fast, production-ready REST API layout featuring seamless endpoint endpoints for document uploads and user queries.
 * **Dynamic Directory Ingestion:** Automatical monitoring of the `data/` directory to load, parse, and split any uploaded PDF files on-the-fly.
@@ -12,7 +12,7 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) backend engine designed
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Framework:** FastAPI
 * **Server:** Uvicorn
@@ -23,7 +23,7 @@ An enterprise-grade Retrieval-Augmented Generation (RAG) backend engine designed
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 enterprise-rag-backend/
